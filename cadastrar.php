@@ -51,7 +51,7 @@ include_once("PHP/Login/verifica_sessao.php");
                     </form>
                 </fieldset>   
             </div>
-
+<!-- --------------------------------- -->
             <div id="sala">
                 <fieldset>
                     <legend>Adicionar Chave</legend>
@@ -62,7 +62,7 @@ include_once("PHP/Login/verifica_sessao.php");
                     </form>
                 </fieldset>   
             </div>
-
+<!-- --------------------------------- -->
             <div id="adm">
                 <fieldset>
                     <legend>Adicionar usuário Administrador</legend>
