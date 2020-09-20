@@ -18,8 +18,8 @@ window.onload= function(){
     var bt3=document.querySelector(".btADM");
     bt3.onclick = mostrarADM;
 
-    
-    sala.classList.add("oculto")
+    pessoa.classList.add("oculto")
+
     adm.classList.add("oculto")
 };
 
