@@ -13,7 +13,7 @@
     echo "    <th>Estado</th>";
     echo "    <th>Usando</th>";
     echo "    <th>Horários</th>";
-    echo "    <th>Entregar</th>";
+    echo "    <th >Entregar</th>";
     echo "    <th>Agendar</th>";
     echo"</tr>";
     while($dados = $resultado->fetch_array()){  
@@ -23,8 +23,8 @@
         echo "  <td>".$dados["estado"]."</td>";
         echo "  <td>".$dados["usuario"]."</td>";
         echo "  <td>".$dados["horario"]."</td>";
-        echo "  <td><button class='btTabela'>ola</button></td>";
-        echo "  <td><button class='btTabela'>ola</button></td>";
+        echo "  <td style='padding:0;'><button class='btTabela'>Entrengar</button></td>";
+        echo "  <td style='padding:0;'><button class='btTabela'>Agendar</button></td>";
         echo "</tr>";
     }
 

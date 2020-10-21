@@ -10,6 +10,7 @@ if($_SESSION["matricula"]){
 ?>
 <html lang="pt-BR">
     <head>
+        <link rel="shortcut icon" href="IMG/chave.png"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
  

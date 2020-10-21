@@ -39,11 +39,26 @@ input{
     font-size: 1.2em;
     color:#404040;
     border:2px groove ;
-    border-radius: 6px;
+    border-radius: 10px;
+}input:focus{
+    outline: none;
 }input[type=submit]{
     width: 90%;
     background-color: #1a8cff;
     color:white;
+    border-radius: 30px;
+}input[type="submit"]:focus{
+    outline: none;
+}input[type="submit"]:active:hover {
+    background:#104fa2 ;
+    box-shadow: 0 1px 10px 0px #666666; 
+}input[type="submit"]:active {
+    background:#104fa2 ;
+    box-shadow: 0 1px 10px 0px #666666; 
+}
+input[type="submit"]:hover{
+    background:#1566d1 ;
+    box-shadow: 0 1px 10px 0px #999999;
 }
 .btTabela{
     width: 100%;
