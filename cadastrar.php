@@ -7,25 +7,21 @@ include_once("PHP/Login/verifica_sessao.php");
 <html lang="pt-br">
 <head>
     <link rel="shortcut icon" href="IMG/chave.png"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/main.css"> 
-    <link rel="stylesheet" href="CSS/cadastrar.css">
-    
+    <link rel="stylesheet" href="CSS/cadastrar.css"> 
 <!-- --------------------------------- -->
-
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js"></script>
-    <script src="javascript/painel.js"></script>
     <title>Cadastrar</title>
 </head>
 <body>
-    <nav>
-        <h2 class="titulo">SYSKEY</h2> 
-        <a href="PHP/Login/logout.php" class= "paginas">Sair</a>
-        <a href="cadastrar.php" class= "paginas">Cadastrar</a>
-        <a href="main.php" class= "paginas">Inicio</a>
-    </nav>
+        
+    <?php 
+    include "PHP/header/header.php";
+    ?>
+
+
+
+    <script src="javascript/painel.js">
+
+    </script>
         <!-- --------------------------------- -->
     <main>
         <div class="caixaBT">
@@ -73,9 +69,9 @@ include_once("PHP/Login/verifica_sessao.php");
                 <center><h2>Adicionar Chave</h2></center>
                 <form action="PHP/Cadastro/sala.php" method="post">
                     <?php
-                        if (isset($_SESSION['cpfCasd'])) {
+                        if (isset($_SESSION['numCasd'])) {
                             echo '<p class="Erro">Já exite esse número de chave</p>';
-                            unset($_SESSION['cpfCasd']);
+                            unset($_SESSION['numCasd']);
                         }
                         elseif (isset($_SESSION['VaziuSalas'])){
                             echo '<p class="Erro">Campo/s Váziu/s</p>';
@@ -87,7 +83,7 @@ include_once("PHP/Login/verifica_sessao.php");
                     <p class="tsala">TIPO DE SALA:</p><br>
                     <label><input type="radio" name="tipo" value="sala de aula" >SALA DE AULA</label> <br> <br>
                     <label><input type="radio" name="tipo" value="laboratorio">LABORATÓRIO </label><br><br>
-                    <label><input type="radio" name="tipo" id="sele" value="vd">OUTRO: <input type="text" name="tipoo" class="outro" id="texto" checked=true></label>
+                    <label><input type="radio" name="tipo" id="sele" value="vd">OUTRO: <input type="text" name="texto" class="outro" id="texto" checked=true></label>
                     <script type="text/javascript">
            
                         document.querySelector("#sele").addEventListener("click", function(){document.querySelector("#texto").focus()})

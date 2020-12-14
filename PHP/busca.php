@@ -2,31 +2,32 @@
 
     // incluir a conexão
     include_once("conexao.php");
-
-     
+ 
     //chamar o banco de dados "chaves"
     $chave = "SELECT * FROM chaves";
-    $num=1;
-    $resultado = mysqli_query($conexao, $chave);
+
+    $resultado = mysqli_query($conexao, $chave);//chamar a conexão
     echo "<tr>";
     echo "    <th>N° das Chaves</th>";
     echo "    <th>Estado</th>";
     echo "    <th>Usando</th>";
     echo "    <th>Horários</th>";
     echo "    <th >Entregar</th>";
-    echo "    <th>Agendar</th>";
+    echo "    <th>Pegar</th>";
     echo"</tr>";
-    while($dados = $resultado->fetch_array()){  
-    //colocar dados do banco na tabela inicial
+
+    
+    while($dados = $resultado->fetch_array()){ //verificar e colocar dados do banco na tabela
+    
         echo "<tr>";
         echo "  <td>".$dados["numero"]."</td>";
         echo "  <td>".$dados["estado"]."</td>";
         echo "  <td>".$dados["usuario"]."</td>";
         echo "  <td>".$dados["horario"]."</td>";
-        echo "  <td style='padding:0;'><button class='btTabela' id='entregar".$num."'>Entrengar</button></td>";
-        echo "  <td style='padding:0;'><button class='btTabela' id='agendar".$num."'>Agendar</button></td>";
+        echo "  <td style='padding:0;'><button onclick='entregar(".'"'.$dados["numero"].'"'.")' class='btTabela' >Entrengar</button></td>";
+        echo "  <td style='padding:0;'><button onclick='pegar(".'"'.$dados["numero"].'"'.")' class='btTabela'>Pegar</button></td>";
         echo "</tr>";
-        $num++;
     }
+    
 
 ?>

@@ -5,7 +5,6 @@ $(document).ready(function(){
 var pessoa;
 var sala;
 var adm;
-
 window.onload= function(){
     pessoa = document.querySelector("#pessoa");
     sala = document.querySelector("#sala");
@@ -22,8 +21,6 @@ window.onload= function(){
 
     adm.classList.add("oculto")
 };
-
-
 function mostrarP(){
     pessoa.classList.remove("oculto")
     sala.classList.add("oculto")
@@ -39,3 +36,5 @@ function mostrarADM(){
     sala.classList.add("oculto")
     adm.classList.remove("oculto")
 }
+
+

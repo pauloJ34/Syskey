@@ -5,7 +5,7 @@ include_once("../conexao.php");
 //verificar se um ou os dois campus estão vazio
 if(empty($_POST["matricula"]) || empty($_POST["senha"])) {
 	$_SESSION['vazio']=true;
-    header("location: ../../index.php");
+    header("location: ../../index");
     exit();
 }
 //proteçã de SQL inject
@@ -23,18 +23,18 @@ $row = mysqli_num_rows($result);
 // se existir vai ser redirecionado para outra página
 if($row == 1){
 	$_SESSION['matricula'] = $usuario;
-	$query1="select id, login,funcao from login where login='{$usuario}' and senha=md5('{$senha}') and funcao='ADM'";
+	$query1="select id, login,funcao from login where login='{$usuario}' and senha=md5('{$senha}') and funcao='1'";
 	$result1= mysqli_query($conexao1, $query1);
 	$row1 = mysqli_num_rows($result1);
 	unset($_SESSION["não_autenticado"]);
 	unset($_SESSION["vazio"]);
-	header("location: ../../main.php");
+	header("location: ../../main");
 }
 elseif ($usuario == " " || $senha == " ") {
 	# code...
 	$_SESSION['vazio']=true;
 	$_SESSION['não_autenticado']=false;
-	header("location: ../../index.php");
+	header("location: ../../index");
     exit();
 
 }
@@ -42,7 +42,7 @@ elseif ($usuario == " " || $senha == " ") {
 else{
 	$_SESSION['vazio']=false;
 	$_SESSION['não_autenticado']=true;
-	header("location: ../../index.php");
+	header("location: ../../index");
     exit();
 }
 

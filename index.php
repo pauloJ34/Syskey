@@ -3,7 +3,7 @@
 error_reporting(0);
 session_start();
 if($_SESSION["matricula"]){
-    header("location: main.php");
+    header("location: main");
     exit();
 }
 
@@ -46,5 +46,5 @@ if($_SESSION["matricula"]){
         </main>
     </body>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <script src="javascript/funcionMain.js"></script>
+    <script src="javascript/tableColor.js"></script>
 </html>

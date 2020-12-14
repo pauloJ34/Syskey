@@ -16,27 +16,27 @@ if($row == 1){
     $_SESSION['cpfCasd']=true;
     if($row1 ==1){
         $_SESSION['loginCasd']=true;
-        header("location: ../../cadastrar.php");
+        header("location: ../../cadastrar");
         exit();
     }
-    header("location: ../../cadastrar.php");
+    header("location: ../../cadastrar");
     exit();
 }
 //se não exitir, irá verificar se ta vaziu ou não
 else{
     //verificação se está com os campus estão vazius
     if (empty($_POST["nome"])|| empty($_POST["cpf"])) {
-        header("location: ../../cadastrar.php");
+        header("location: ../../cadastrar");
         $_SESSION['VaziuADM']=true;
         exit(); 
     }
     if(empty($_POST["funcao"]) || empty($_POST["login"])){   
-        header("location: ../../cadastrar.php");
+        header("location: ../../cadastrar");
         $_SESSION['VaziuADM']=true;
         exit();
     }
     if(empty($_POST["senha"])){
-        header("location: ../../cadastrar.php");
+        header("location: ../../cadastrar");
         $_SESSION['VaziuADM']=true;
         exit();
     }
@@ -46,9 +46,11 @@ else{
         $senha=$_POST['senha'];
         $nome=$_POST['nome'];
         $cpf=$_POST['cpf'];
-        $funcao=$_POST['funcao'];
-        $sql1="INSERT INTO login (login,senha,funcao) VALUES ('".$login."',md5('".$senha."'),'ADM')";
-        $sql2="INSERT INTO dados (login, senha, nome, cpf, funcao) VALUES ('".$login."', md5('".$senha."'), '".$nome."', '".$cpf."', '".$funcao."')";
+        
+        $profissao=$_POST['funcao'];
+
+        $sql1="INSERT INTO login (login,senha,funcao) VALUES ('".$login."',md5('".$senha."'),'1')";
+        $sql2="INSERT INTO dados (login, senha, nome, cpf, profissao) VALUES ('".$login."', md5('".$senha."'), '".$nome."', '".$cpf."', '".$profissao."')";
         //primeira conexão para adicionar no primeiro banco de dado
         if($conexao=mysqli_query($conexao, $sql1)){
              echo "deu certo"; 
@@ -63,7 +65,7 @@ else{
             echo "erro";
             die( mysqli_error( $conexao ) );
         } 
-        header("location: ../../cadastrar.php");
+        header("location: ../../cadastrar");
         exit();
 
     }

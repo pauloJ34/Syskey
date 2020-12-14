@@ -3,7 +3,7 @@ body{
     padding: 0;
     background-image: url("../IMG/papelParede.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100% cover;
 }
 div.notifica_erro{
     width:92%;
@@ -17,13 +17,13 @@ div.notifica_erro{
     text-align: center;
 }
 div.cadastrar{
-    position: absolute;
     width: 30%;
-    top:30%;
-    left: 35%;
+    margin: auto;
+    margin-top: 15vw;
     border: 1px solid #999999;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #f2f2f2;
+    min-width: 265px;
 }
 div.notifica_erro{
     font-size: 18px;
@@ -41,7 +41,7 @@ input{
     font-size: 1.2em;
     color:#404040;
     border:2px groove ;
-    border-radius: 10px;
+    border-radius: 20px;
 }input:focus{
     outline: none;
 }input[type=submit]{
@@ -49,6 +49,7 @@ input{
     background-color: #1a8cff;
     color:white;
     border-radius: 30px;
+    min-width: 130px ;
 }input[type="submit"]:focus{
     outline: none;
 }input[type="submit"]:active:hover {

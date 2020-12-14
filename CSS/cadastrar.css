@@ -8,10 +8,14 @@ p{
     margin-top: 2%;
     text-align: center;
 }
+.btP{margin-bottom: 2%;}
+.btS{margin-bottom: 2%;}
+.btADM{margin-bottom: 2%;}
 .caixa{
     width: 40%;
     margin: auto;
     margin-top: 3%;
+    min-width: 325px;
 }
 input[type="text"],[type="password"],[type="number"]{
     font-size: 16px;
@@ -79,7 +83,7 @@ button:focus{
     outline: none;
 }
 input[type="text"].outro{
-    width:65%;
+    width:50%;
     margin-left: 0;
 }.Erro{
     font-size: 13px;

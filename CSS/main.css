@@ -1,15 +1,16 @@
-body{margin: 0;
+html,body{
+    overflow-x:hidden;
+}
+
+body{
+    margin: 0;
     padding: 0;
     font-family:Arial, Helvetica, sans-serif;
     background-image: url("../IMG/papelParede3.jpg");
     background-repeat: no-repeat;
-    background-size: cover;}
-nav{height: auto;
-    width: 100%;
-    color: white;
-    background-color: purple;
-    float: left;
-    height: 68px;}
+    background-size: 100% 100% cover;
+}
+
 h2.titulo{
     width: 250px;
     padding-left: 30px;
@@ -27,17 +28,26 @@ a.paginas{
 }
 a.paginas:active{color:crimson;
 }
+nav{
+    width: 100%;
+    color: white;
+    background-color: purple;
+    height: 68px;
+    }
 main{width: 100%;
-    float: left;
+    
 }
-table{margin: auto;
-    margin-top: 1%;
+table{width: 50%;
+    margin: auto;
+    padding-left: 0;
+    word-wrap:break-word;
+}tr{
+    width: 100%;
 }
 table,tr,th,td{
-    padding:0px 20px 0px 20px;
     border: 1px solid black;
     border-collapse: collapse;
-    font-size: 1.04em;
+    font-size: 100%;
     text-align: center;
 }
 th{
@@ -49,7 +59,9 @@ button.btRecarregar{
     margin-left: 40%;
     margin-right: 40%;
     margin-top: 1%;
+    margin-bottom: 2%;
     width: 20%;
+    min-width: 125px;
     height: 40px;
     font-size: 1.25em;
     border-radius: 30px;
@@ -83,7 +95,7 @@ button.btRecarregar:hover{
     outline: none;
 }
 .btTabela{
-    height: 30px;
+    height: 38px;
     margin: 0;
     width: 100%;
     border:0;
@@ -99,14 +111,40 @@ button.btRecarregar:hover{
     outline: none;
 }
 .btTabela:active.btTabela:hover{
-    position: relative;
     border:0;
-    border-left: 3px solid #a6a6a6;
-    border-top: 3px solid #a6a6a6;
+    border-left: 2px solid #a6a6a6;
+    border-top: 2px solid #a6a6a6;
 
 }
 .btTabela:hover{
     background-color: #e6e6e6;
     border-right: 3px solid #a6a6a6;
     border-bottom: 3px solid #a6a6a6;
+}.links{
+    position: absolute;
+    right: 0;
+    top:68px;
+    text-align: center;
+    width: 130px;
+    background-color: rgba(155, 155, 155,0.9);
+    display: block;
+}
+a.preto{
+    position: relative;
+    color: black; 
+    width: 100%;
+    padding-right: 0;
+    margin-top: 15px;
+    margin-bottom:15px;
+}
+ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
+}hr{
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
